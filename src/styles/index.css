@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Orbitron:wght@500&display=swap");
+
+:root {
+  --color1: #101223;
+  --color3: #C7C4C2;
+  --color4: #2E371D;
+  --color2: #333E54;
+  --color5: #1bbc9c;
+  --transition: all 0.5s ease-in-out;
+}
+
+*{
+  font-family: orbitron;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  color:#101223;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+img{
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: #101223;
+}
+
+li{
+  list-style-type: none;
+}
+
+button{
+  cursor: pointer;
+  outline: 0;
+  background: transparent;
+}
+
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0.6rem 0;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/img/colegas-que-disfrutan-su-trabajo-reunion-negocios.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+}
+
+.brand-and-toggler{
+  font-size: 1.65rem;
+  padding: 0.8rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.navbar-brand{
+  font-weight: 500;
+  color: #2E371D;
+}
+
+.navbar-toggler{
+  border: none;
+  color: #1bbc9c;
+  font-size: 2rem;
+}
+
+.navbar-nav{
+  margin: 0.2rem 0 0.6rem 0;
+}
+
+.nav-item{
+  padding: 0.6rem 0;
+}
+
+.nav-link{
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  opacity: 0.65;
+  transition: var(--transition);
+}
+
+.nav-link:hover{
+  color: #1bbc9c;
+}
+
+.navbar-collapse{
+  display: none;
+}
+
+.navbar-expand{
+  height: 20rem;
+  transition: height 0.5s ease-in-out;
+}
+
+
+.rotate:hover{
+  transform: rotate(180deg);
+  transition: transform 0.5s linear 0s
+}
+
+.hero-div{
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-div h1{
+  font-size: 2.55rem;
+  padding-bottom: 0.4rem;
+}
+
+.hero-div p{
+  color: #C7C4C2;
+  font-size: 1.05rem;
+  letter-spacing: 3px;
+}
+
+.hero-btns{
+  margin-top: 2.8rem;
+}
+
+.hero-btns button{
+  border: 3.5px solid white;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+}
+
+.btn-trans{
+  color: white;
+  transition: var(--transition);
+  display: none;
+}
+
+.btn-trans:hover{
+  background: #1bbc9c;
+  border: #1bbc9c;
+}
+
+.btn-white{
+  background: white;
+   color: #333E54;
+   transition: var(--transition);
+}
+
+.btn-white:hover{
+  background: transparent;
+  color: white;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar{
+    background: transparent;
+    margin-top: 1.4rem;
+  }
+  .navbar .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-brand{
+    color: white;
+    font-size: 2rem;
+  }
+  .navbar-toggler{
+    display: none;
+  }
+  .navbar-collapse{
+    display: block!important;
+  }
+  .navbar-nav{
+    display: flex;
+    margin: 0;
+  }
+  .nav-item{
+    margin-left: 1.8rem;
+  }
+  .nav-link{
+    color: white;
+  }
+  .hero-div h1{
+    font-size: 3.8rem;
+  }
+  .btn-trans{
+    display: inline-block;
+    margin-right: 0.8rem;
+  }
+  /* navbar change */
+  .cng-navbar{
+    box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+    background: white;
+    position: fixed;
+    width: 100%;
+    transition: var(--transition);
+
+  }
+  .cng-navbar .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cng-navbar .navbar-brand{
+    color: var(--color2)
+  }
+  .cng-navbar .nav-link{
+    color: #333E54;
+  }
+
+  .cng-navbar .nav-link:hover{
+    color: #1bbc9c;
+  }
+}
