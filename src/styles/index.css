@@ -126,18 +126,23 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .navbar-collapse{
-  display: none;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: all 0.5s ease-in-out;
+  height: 0;
 }
+
+/* .navbar-nav-collapse{
+  display:none;
+} */
 
 .navbar-expand{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: all 0.5s ease-in-out;
   height: 20rem;
-  transition: height 0.5s ease-in-out;
 }
 
-
-.rotate:hover{
-  transform: rotate(180deg);
-  transition: transform 0.5s linear 0s
+.rotate:active{
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .hero-div{

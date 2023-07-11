@@ -27,12 +27,12 @@ function App() {
                 type="button" 
                 className="navbar-toggler"
                 onClick={handleToggler}>
-              <i className={`${toggler && "rotate"} fa-solid fa-bars`}></i>  
+              <i className={toggler ? "rotate fa-solid fa-x" : "rotate fa-solid fa-bars" }></i>  
               </button>
             </div>
 
             <div className={!toggler ? "navbar-collapse" : "navbar-expand"}>
-              <ul className="navbar-nav">
+              <ul className= "navbar-nav">
                 <li className="nav-item">
                   <a href="#intro" className="nav-link">intro</a>
                 </li>
