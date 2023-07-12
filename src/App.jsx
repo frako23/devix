@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import "./styles/App.css";
+import imagen from "./assets/img/portatil-junto-tableta-telefono (1).jpg";
 
 function App() {
   const[toggler, setToggler] = useState(false)
@@ -100,7 +101,38 @@ function App() {
         </div>
       </section>
       {/* termina la sección de detalle */}
-    </>
+      {/* inicia sección de caracteristicas */}
+      <section className='feature'>
+        <div className="container">
+          <div className="row">
+            <div className="feature-left">
+              <img src={imagen} alt="" />
+            </div>
+            <div className="feature-right">
+              <div className="tittle">
+                <h2>Explora el futuro</h2>
+                <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti provident dolor excepturi animi consequatur?</p>
+              </div>
+              <div className="feature-item">
+                <span> <i className='fas fa-tablet-alt'></i></span>
+                <div>
+                  <h3>Diseno Adaptado</h3>
+                  <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus tenetur nesciunt laborum tempore pariatur.</p>
+                </div>
+              </div>
+              <div className="feature-item">
+                <span> <i className='fas fa-clone'></i></span>
+                <div>
+                  <h3>Listo para la retina</h3>
+                  <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus tenetur nesciunt laborum tempore pariatur.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* termina sección de caracteristicas */}
+          </>
   );
 }
 
