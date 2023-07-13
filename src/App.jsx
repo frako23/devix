@@ -31,7 +31,7 @@ function App() {
                 type="button" 
                 className="navbar-toggler"
                 onClick={handleToggler}>
-              <i className={toggler ? "rotate fa-solid fa-x" : "rotate fa-solid fa-bars" }></i>  
+              <i className={toggler ? "rotate fa-solid fa-xmark" : "rotate fa-solid fa-bars" }></i>  
               </button>
             </div>
 
