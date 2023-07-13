@@ -168,7 +168,7 @@ function App() {
             className="faq-item">
               <div className="faq-head">
                 <h3>Porque es importante tener presencia en internet?</h3>
-                <span><i className='fas fa-plus'></i></span>
+                <span><i className={accordion1 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
               </div>
               <div className={accordion1 ? "show-faq-content" : "faq-content"}>
                 <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
@@ -181,7 +181,7 @@ function App() {
             className="faq-item">
               <div className="faq-head">
                 <h3>Porque es importante tener presencia en internet?</h3>
-                <span><i className='fas fa-plus'></i></span>
+                <span><i className={accordion2 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
               </div>
               <div className={accordion2 ? "show-faq-content" : "faq-content"}>
                 <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
@@ -194,7 +194,7 @@ function App() {
             className="faq-item">
               <div className="faq-head">
                 <h3>Porque es importante tener presencia en internet?</h3>
-                <span><i className='fas fa-plus'></i></span>
+                <span><i className={accordion3 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
               </div>
               <div className={accordion3 ? "show-faq-content" : "faq-content"}>
                 <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
@@ -207,7 +207,7 @@ function App() {
             className="faq-item">
               <div className="faq-head">
                 <h3>Porque es importante tener presencia en internet?</h3>
-                <span><i className='fas fa-plus'></i></span>
+                <span><i className={accordion4 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
               </div>
               <div className={accordion4 ? "show-faq-content" : "faq-content"}>
                 <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
