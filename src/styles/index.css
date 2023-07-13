@@ -535,6 +535,17 @@ section{
     height: 0;
     overflow: hidden;
   }
+  .cng-navbar{
+    box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+    background: white;
+    position: fixed;
+    width: 100%;
+    transition: var(--transition);
+    z-index: 200;
+
+  }
+  
 }
 
 @media screen and (min-width: 768px) {
