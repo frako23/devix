@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import "./styles/App.css";
+import "./styles/index.css";
+import { Testimonials } from "./components/testimonials";
 import imagen from "./assets/img/portatil-junto-tableta-telefono (1).jpg";
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
 
       </header>
       {/* termina el header */}
+
       {/* comienza la sección de detalle */}
       <section className='detail'>
         <div className="container">
@@ -113,7 +115,7 @@ function App() {
               <img src={imagen} alt="" />
             </div>
             <div className="feature-right">
-              <div className="tittle">
+              <div className="title">
                 <h2>Explora el futuro</h2>
                 <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti provident dolor excepturi animi consequatur?</p>
               </div>
@@ -157,7 +159,7 @@ function App() {
       {/* comienza la seccion de preguntas frecuentes */}
       <section className='faq'>
         <div className="container">
-          <div className="tittle">
+          <div className="title">
             <h2>Tienes alguna duda?</h2>
             <p className='text'>Lorem ipsum dolor sit amet consectetur.</p>
           </div>
@@ -218,6 +220,46 @@ function App() {
         </div>
       </section>
       {/* termina la seccion de preguntas frecuentes */}
+
+      {/* inicia la sección de testimoniales */}
+      <Testimonials />
+      {/* termina la sección de testimoniales */}
+
+      {/* sección de contacto */}
+      <section className='contact'>
+        <div className="container">
+          <div className="title">
+            <h2>
+              Contactanos
+            </h2>
+            <p className='text'>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        <div className="row">
+          <div className="contact-left">
+            <h2>Envia tu mensaje aqui</h2>
+            <form>
+              <input type="text" className='form-control' placeholder='Nombre'/>
+              <input type="email" className='form-control' placeholder='Correo'/>
+              <textarea placeholder='Message' rows="6" />
+              <button type = "submit" className='submit-btn'> Enviar</button>
+            </form>
+          </div>
+
+            <div className="contact-right">
+              <div>
+                <h2>Envianos un correo</h2>
+                <p className='text'>devix@gmail.com</p>
+              </div>
+              <div>
+                <h2>Envianos un Whatsapp</h2>
+                <p className='text'>0412-xxxxxx</p>
+              </div>
+            </div>
+        </div>
+        </div>
+
+      </section>
+      {/* sección de contacto */}
       </>
   );
 }
