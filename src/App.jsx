@@ -247,11 +247,11 @@ function App() {
 
             <div className="contact-right">
               <div>
-                <h2>Envianos un correo</h2>
+                <h2>Envianos un correo <i className='fa-solid fa-envelope'></i></h2>
                 <p className='text'>devix@gmail.com</p>
               </div>
               <div>
-                <h2>Envianos un Whatsapp</h2>
+                <h2>Envianos un Whatsapp <i className="fa-brands fa-whatsapp"></i></h2>
                 <p className='text'>0412-xxxxxx</p>
               </div>
             </div>
