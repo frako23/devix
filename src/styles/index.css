@@ -149,15 +149,12 @@ section{
   color: #1bbc9c;
 }
 
-/* .navbar-nav-collapse{
-  display:none;
-} */
 
-.navbar-collapse{
+/* .navbar-collapse{
   transition: var(--transition);
   height: 0;
   overflow: hidden;
-}
+} */
 
 /* .navbar-expand{
   transition: var(--transition);
@@ -375,6 +372,12 @@ section{
     margin-top: 1.4rem;
   }
 
+  .navbar .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .navbar-brand{
     color: white;
     font-size: 2rem;
@@ -453,6 +456,11 @@ section{
     transition: var(--transition);
     overflow: auto;
     height: 18rem;
+  }
+  .navbar-collapse{
+    transition: var(--transition);
+    height: 0;
+    overflow: hidden;
   }
 }
 
