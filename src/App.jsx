@@ -5,7 +5,10 @@ import imagen from "./assets/img/portatil-junto-tableta-telefono (1).jpg";
 function App() {
   const[toggler, setToggler] = useState(false)
   const[scrollTop, setScrollTop] = useState(false)
-
+  const[accordion1, setAccordion1] = useState(false);
+  const[accordion2, setAccordion2] = useState(false);
+  const[accordion3, setAccordion3] = useState(false);
+  const[accordion4, setAccordion4] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', () =>{
       if (window.scrollY > 100) {
@@ -101,6 +104,7 @@ function App() {
         </div>
       </section>
       {/* termina la sección de detalle */}
+
       {/* inicia sección de caracteristicas */}
       <section className='feature'>
         <div className="container">
@@ -132,7 +136,89 @@ function App() {
         </div>
       </section>
       {/* termina sección de caracteristicas */}
-          </>
+
+      {/* comienza la seccion de video */}
+      <section className='video'>
+        <div className="container">
+          <a className='center' href="">
+            <i className='fas fa-play'></i>
+          </a>
+          <h2>Ve un video de muestra</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum esse accusantium dolore voluptates excepturi assumenda molestiae doloremque nemo ut sed!</p>
+        </div>
+      </section>
+
+      {/* termina la seccion de video */}
+          
+      {/* comienza la seccion de equipo */}
+
+      {/* termina la seccion de equipo*/}
+
+      {/* comienza la seccion de preguntas frecuentes */}
+      <section className='faq'>
+        <div className="container">
+          <div className="tittle">
+            <h2>Tienes alguna duda?</h2>
+            <p className='text'>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <div className="row">
+            <div 
+            onClick={() => setAccordion1(!accordion1)}
+            className="faq-item">
+              <div className="faq-head">
+                <h3>Porque es importante tener presencia en internet?</h3>
+                <span><i className='fas fa-plus'></i></span>
+              </div>
+              <div className={accordion1 ? "show-faq-content" : "faq-content"}>
+                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+              </div>
+            </div>
+
+            <div 
+            onClick={() => setAccordion2(!accordion2)}
+            className="faq-item">
+              <div className="faq-head">
+                <h3>Porque es importante tener presencia en internet?</h3>
+                <span><i className='fas fa-plus'></i></span>
+              </div>
+              <div className={accordion2 ? "show-faq-content" : "faq-content"}>
+                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+              </div>
+            </div>
+
+            <div 
+            onClick={() => setAccordion3(!accordion3)}
+            className="faq-item">
+              <div className="faq-head">
+                <h3>Porque es importante tener presencia en internet?</h3>
+                <span><i className='fas fa-plus'></i></span>
+              </div>
+              <div className={accordion3 ? "show-faq-content" : "faq-content"}>
+                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+              </div>
+            </div>
+
+            <div 
+            onClick={() => setAccordion4(!accordion4)}
+            className="faq-item">
+              <div className="faq-head">
+                <h3>Porque es importante tener presencia en internet?</h3>
+                <span><i className='fas fa-plus'></i></span>
+              </div>
+              <div className={accordion4 ? "show-faq-content" : "faq-content"}>
+                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* termina la seccion de preguntas frecuentes */}
+      </>
   );
 }
 
