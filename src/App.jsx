@@ -82,7 +82,7 @@ function App() {
               <span>
                 <i className='fas fa-tablet-alt'></i>
               </span>
-              <h2>Diseño Responsivo</h2>
+              <h2>Diseño adaptado a cada pantalla</h2>
               <div className="line"></div>
               <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam odio et fugit assumenda alias? Accusamus, iste. Rem deserunt corporis similique ipsam sint vel reiciendis eligendi!</p>
             </div>
@@ -129,7 +129,7 @@ function App() {
               <div className="feature-item">
                 <span> <i className='fas fa-clone'></i></span>
                 <div>
-                  <h3>Listo para la retina</h3>
+                  <h3>Listo para tus sentidos</h3>
                   <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus tenetur nesciunt laborum tempore pariatur.</p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ function App() {
             onClick={() => setAccordion1(!accordion1)}
             className="faq-item">
               <div className="faq-head">
-                <h3>Porque es importante tener presencia en internet?</h3>
+                <h3>¿Por qué es importante tener presencia en internet?</h3>
                 <span><i className={accordion1 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
               </div>
               <div className={accordion1 ? "show-faq-content" : "faq-content"}>
@@ -182,7 +182,7 @@ function App() {
             onClick={() => setAccordion2(!accordion2)}
             className="faq-item">
               <div className="faq-head">
-                <h3>Porque es importante tener presencia en internet?</h3>
+                <h3>¿Por qué es importante tener presencia en internet?</h3>
                 <span><i className={accordion2 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
               </div>
               <div className={accordion2 ? "show-faq-content" : "faq-content"}>
@@ -195,7 +195,7 @@ function App() {
             onClick={() => setAccordion3(!accordion3)}
             className="faq-item">
               <div className="faq-head">
-                <h3>Porque es importante tener presencia en internet?</h3>
+                <h3>¿Por qué es importante tener presencia en internet?</h3>
                 <span><i className={accordion3 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
               </div>
               <div className={accordion3 ? "show-faq-content" : "faq-content"}>
@@ -208,7 +208,7 @@ function App() {
             onClick={() => setAccordion4(!accordion4)}
             className="faq-item">
               <div className="faq-head">
-                <h3>Porque es importante tener presencia en internet?</h3>
+                <h3>¿Por qué es importante tener presencia en internet?</h3>
                 <span><i className={accordion4 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
               </div>
               <div className={accordion4 ? "show-faq-content" : "faq-content"}>
@@ -230,13 +230,13 @@ function App() {
         <div className="container">
           <div className="title">
             <h2>
-              Contactanos
+              Contáctanos
             </h2>
             <p className='text'>Lorem ipsum dolor sit amet consectetur.</p>
           </div>
         <div className="row">
           <div className="contact-left">
-            <h2>Envia tu mensaje aqui</h2>
+            <h2>Envia tu mensaje aquí</h2>
             <form>
               <input type="text" className='form-control' placeholder='Nombre'/>
               <input type="email" className='form-control' placeholder='Correo'/>
@@ -260,6 +260,30 @@ function App() {
 
       </section>
       {/* sección de contacto */}
+
+      {/* footer */}
+      <footer className='footer center'>
+        <div className="container">
+          <p className='text'>
+            Copyright <i className="fa-regular fa-copyright"></i> | Todos los derechos reservados 
+          </p>
+          <div className="footer-links">
+            <a href="#" className='center'>
+            <i className="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" className='center'>
+            <i className="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" className='center'>
+            <i className="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="#" className='center'>
+            <i className="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      {/* footer */}
       </>
   );
 }

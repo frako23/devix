@@ -439,6 +439,39 @@ section{
   margin-top: 0;
 }
 
+/* footer */
+.footer{
+  text-align: center;
+  background: var(--color1);
+  color: white;
+  padding: 2rem 0;
+  height: 50vh;
+}
+
+.footer .text{
+  opacity: 0.8;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+
+.footer-links a{
+  color: white;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  margin: 0 0.2rem;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.footer-links a:hover{
+  background: var(--color5);
+}
+
 @media screen and (min-width: 992px) {
   .navbar{
     background: transparent;
@@ -599,7 +632,5 @@ section{
   .contact .row{
     column-gap: 4rem;
   }
-  /* .contact-right{   
-    padding-left: 4rem!important;
-  } */
+ 
 }
