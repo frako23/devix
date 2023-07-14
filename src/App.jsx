@@ -248,7 +248,7 @@ function App() {
             <div className="contact-right">
               <div>
                 <h2>Envianos un correo <i className='fa-solid fa-envelope'></i></h2>
-                <p className='text'>devix@gmail.com</p>
+                <p className='text'> <a href='mailto:devix.tech.2023@gmail.com'> devix.tech.2023@gmail.com</a></p>
               </div>
               <div>
                 <h2>Envianos un Whatsapp <i className="fa-brands fa-whatsapp"></i></h2>
@@ -268,6 +268,9 @@ function App() {
             Copyright <i className="fa-regular fa-copyright"></i> | Todos los derechos reservados 
           </p>
           <div className="footer-links">
+          <a href="https://github.com/frako23" className='center'>
+            <i className="fa-brands fa-github"></i>
+            </a>
             <a href="#" className='center'>
             <i className="fa-brands fa-facebook"></i>
             </a>
