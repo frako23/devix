@@ -129,10 +129,36 @@ section{
   font-weight: 500;
   color: #2E371D;
   font-family: Orbitron;
+  
 }
 
-#main-title{
+.typing{
+  /* display: block; */
   font-family: Orbitron;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 8ch;
+  color: #1bbc9c;
+  animation: typing 5s steps(8), blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+#main-title{
+  /* display: block; */
+  font-family: Orbitron;
+  /* white-space: nowrap;
+  border-right: 4px solid;
+  width: 24ch;
+
+  animation: typing 5s steps(24), blink .5s infinite step-end alternate;
+  overflow: hidden; */
+}
+
+@keyframes typing {
+  from {width: 0}
+}
+
+@keyframes blink {
+  50% {border-color: transparent}
 }
 
 .navbar-toggler{

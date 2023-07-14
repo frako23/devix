@@ -108,7 +108,7 @@ function App() {
         </nav>
 
         <div className="hero-div center container">
-          <h1 id="main-title">Haz que tu página web impresione</h1>
+          <h1 id="main-title">Haz que tu página web <span className="typing">impresione</span> </h1>
           <p>La mejor manera de que personas conecten con tu marca.</p>
 
           <div className="hero-btns">
