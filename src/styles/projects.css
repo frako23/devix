@@ -97,11 +97,11 @@
     border-radius: 0.7rem;
   }
 
-    .gallery-info{
+    /* .gallery-info{
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
+    } */
 
     .gallery-info p{
         font-weight: 600;
@@ -134,4 +134,13 @@
             grid-template-columns: 1fr;
             gap: 1.5rem
         }
+    }
+
+    .btn{
+        cursor:pointer;
+        transition: var(--transition);
+    }
+
+    .btn:hover{
+        box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
     }
