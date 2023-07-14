@@ -1,24 +1,35 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 import "./styles/index.css";
 import { Testimonials } from "./components/testimonials";
 import { Projects } from "./components/projects";
+import { useForm, ValidationError } from "@formspree/react";
+
 import imagen from "./assets/img/portatil-junto-tableta-telefono (1).jpg";
 
 function App() {
-  const[toggler, setToggler] = useState(false)
-  const[scrollTop, setScrollTop] = useState(false)
-  const[accordion1, setAccordion1] = useState(false);
-  const[accordion2, setAccordion2] = useState(false);
-  const[accordion3, setAccordion3] = useState(false);
-  const[accordion4, setAccordion4] = useState(false);
+  const [toggler, setToggler] = useState(false);
+  const [scrollTop, setScrollTop] = useState(false);
+  const [accordion1, setAccordion1] = useState(false);
+  const [accordion2, setAccordion2] = useState(false);
+  const [accordion3, setAccordion3] = useState(false);
+  const [accordion4, setAccordion4] = useState(false);
+
+
   useEffect(() => {
-    window.addEventListener('scroll', () =>{
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
-        setScrollTop(true)
-      }else{setScrollTop(false)}
-    }) 
-  }, [])
-  const handleToggler = () => setToggler(!toggler)
+        setScrollTop(true);
+      } else {
+        setScrollTop(false);
+      }
+    });
+  }, []);
+  const handleToggler = () => setToggler(!toggler);
+
+  const [state, handleSubmit] = useForm("xeqbqwwv");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
 
   return (
     <>
@@ -29,33 +40,52 @@ function App() {
               <a href="#" className="navbar-brand">
                 Devix
               </a>
-              <button 
-                type="button" 
+              <button
+                type="button"
                 className="navbar-toggler"
-                onClick={handleToggler}>
-              <i className={toggler ? "rotate fa-solid fa-xmark" : "rotate fa-solid fa-bars" }></i>  
+                onClick={handleToggler}
+              >
+                <i
+                  className={
+                    toggler
+                      ? "rotate fa-solid fa-xmark"
+                      : "rotate fa-solid fa-bars"
+                  }
+                ></i>
               </button>
             </div>
 
             <div className={!toggler ? "navbar-collapse" : "navbar-expand"}>
-              <ul className= "navbar-nav">
+              <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a href="#intro" className="nav-link">intro</a>
+                  <a href="#intro" className="nav-link">
+                    intro
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#feature" className="nav-link">feature</a>
+                  <a href="#feature" className="nav-link">
+                    feature
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#team" className="nav-link">team</a>
+                  <a href="#team" className="nav-link">
+                    team
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#pricing" className="nav-link">pricing</a>
+                  <a href="#pricing" className="nav-link">
+                    pricing
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#testimonial" className="nav-link">testimonial</a>
+                  <a href="#testimonial" className="nav-link">
+                    testimonial
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#contact" className="nav-link">contact</a>
+                  <a href="#contact" className="nav-link">
+                    contact
+                  </a>
                 </li>
               </ul>
             </div>
@@ -63,53 +93,68 @@ function App() {
         </nav>
 
         <div className="hero-div center container">
-          <h1 id='main-title'>Haz que tu página web impresione</h1>
+          <h1 id="main-title">Haz que tu página web impresione</h1>
           <p>La mejor manera de que personas conecten con tu marca.</p>
 
           <div className="hero-btns">
-            <button type="button" className="btn-trans">Descubre más</button>
-            <button type="button" className="btn-white">Conoce a nuestros proyectos</button>
+            <button type="button" className="btn-trans">
+              Descubre más
+            </button>
+            <button type="button" className="btn-white">
+              Conoce a nuestros proyectos
+            </button>
           </div>
         </div>
-
       </header>
       {/* termina el header */}
 
       {/* comienza la sección de detalle */}
-      <section className='detail'>
+      <section className="detail">
         <div className="container">
           <div className="row">
             <div className="detail-item">
               <span>
-                <i className='fas fa-tablet-alt'></i>
+                <i className="fas fa-tablet-alt"></i>
               </span>
               <h2>Diseño adaptado a cada pantalla</h2>
               <div className="line"></div>
-              <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam odio et fugit assumenda alias? Accusamus, iste. Rem deserunt corporis similique ipsam sint vel reiciendis eligendi!</p>
+              <p className="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                odio et fugit assumenda alias? Accusamus, iste. Rem deserunt
+                corporis similique ipsam sint vel reiciendis eligendi!
+              </p>
             </div>
-        <div className="detail-item">
+            <div className="detail-item">
               <span>
-                <i className='fab fa-html5'></i>
+                <i className="fab fa-html5"></i>
               </span>
               <h2>HTML5</h2>
               <div className="line"></div>
-              <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam odio et fugit assumenda alias? Accusamus, iste. Rem deserunt corporis similique ipsam sint vel reiciendis eligendi!</p>
-        </div>
-        <div className="detail-item">
+              <p className="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                odio et fugit assumenda alias? Accusamus, iste. Rem deserunt
+                corporis similique ipsam sint vel reiciendis eligendi!
+              </p>
+            </div>
+            <div className="detail-item">
               <span>
-                <i className='far fa-bell'></i>
+                <i className="far fa-bell"></i>
               </span>
               <h2>Soporte las 24 Horas</h2>
               <div className="line"></div>
-              <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam odio et fugit assumenda alias? Accusamus, iste. Rem deserunt corporis similique ipsam sint vel reiciendis eligendi!</p>
-        </div>
+              <p className="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                odio et fugit assumenda alias? Accusamus, iste. Rem deserunt
+                corporis similique ipsam sint vel reiciendis eligendi!
+              </p>
+            </div>
           </div>
         </div>
       </section>
       {/* termina la sección de detalle */}
 
       {/* inicia sección de caracteristicas */}
-      <section className='feature'>
+      <section className="feature">
         <div className="container">
           <div className="row">
             <div className="feature-left">
@@ -118,20 +163,35 @@ function App() {
             <div className="feature-right">
               <div className="title">
                 <h2>Explora el futuro</h2>
-                <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti provident dolor excepturi animi consequatur?</p>
+                <p className="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                  corrupti provident dolor excepturi animi consequatur?
+                </p>
               </div>
               <div className="feature-item">
-                <span> <i className='fas fa-tablet-alt'></i></span>
+                <span>
+                  {" "}
+                  <i className="fas fa-tablet-alt"></i>
+                </span>
                 <div>
                   <h3>Diseno Adaptado</h3>
-                  <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus tenetur nesciunt laborum tempore pariatur.</p>
+                  <p className="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    voluptatibus tenetur nesciunt laborum tempore pariatur.
+                  </p>
                 </div>
               </div>
               <div className="feature-item">
-                <span> <i className='fas fa-clone'></i></span>
+                <span>
+                  {" "}
+                  <i className="fas fa-clone"></i>
+                </span>
                 <div>
                   <h3>Listo para tus sentidos</h3>
-                  <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus tenetur nesciunt laborum tempore pariatur.</p>
+                  <p className="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    voluptatibus tenetur nesciunt laborum tempore pariatur.
+                  </p>
                 </div>
               </div>
             </div>
@@ -147,80 +207,144 @@ function App() {
       {/* termina la sección de proyectos */}
 
       {/* comienza la seccion de video */}
-      <section className='video'>
+      <section className="video">
         <div className="container">
-          <a className='center' href="">
-            <i className='fas fa-play'></i>
+          <a className="center" href="">
+            <i className="fas fa-play"></i>
           </a>
           <h2>Ve un video de muestra</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum esse accusantium dolore voluptates excepturi assumenda molestiae doloremque nemo ut sed!</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum esse
+            accusantium dolore voluptates excepturi assumenda molestiae
+            doloremque nemo ut sed!
+          </p>
         </div>
       </section>
 
       {/* termina la seccion de video */}
-          
+
       {/* comienza la seccion de equipo */}
 
       {/* termina la seccion de equipo*/}
 
       {/* comienza la seccion de preguntas frecuentes */}
-      <section className='faq'>
+      <section className="faq">
         <div className="container">
           <div className="title">
             <h2>Tienes alguna duda?</h2>
-            <p className='text'>Lorem ipsum dolor sit amet consectetur.</p>
+            <p className="text">Lorem ipsum dolor sit amet consectetur.</p>
           </div>
 
           <div className="row">
-            <div 
-            onClick={() => setAccordion1(!accordion1)}
-            className="faq-item">
+            <div
+              onClick={() => setAccordion1(!accordion1)}
+              className="faq-item"
+            >
               <div className="faq-head">
                 <h3>¿Por qué es importante tener presencia en internet?</h3>
-                <span><i className={accordion1 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
+                <span>
+                  <i
+                    className={accordion1 ? "fa-solid fa-minus" : "fas fa-plus"}
+                  ></i>
+                </span>
               </div>
               <div className={accordion1 ? "show-faq-content" : "faq-content"}>
-                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
-                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+                <p className="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nesciunt quo velit, facilis unde voluptates dolor sed
+                  pariatur, suscipit dolore tempore, minus dolores recusandae
+                  voluptatem saepe?
+                </p>
+                <p className="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nesciunt quo velit, facilis unde voluptates dolor sed
+                  pariatur, suscipit dolore tempore, minus dolores recusandae
+                  voluptatem saepe?
+                </p>
               </div>
             </div>
 
-            <div 
-            onClick={() => setAccordion2(!accordion2)}
-            className="faq-item">
+            <div
+              onClick={() => setAccordion2(!accordion2)}
+              className="faq-item"
+            >
               <div className="faq-head">
                 <h3>¿Por qué es importante tener presencia en internet?</h3>
-                <span><i className={accordion2 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
+                <span>
+                  <i
+                    className={accordion2 ? "fa-solid fa-minus" : "fas fa-plus"}
+                  ></i>
+                </span>
               </div>
               <div className={accordion2 ? "show-faq-content" : "faq-content"}>
-                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
-                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+                <p className="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nesciunt quo velit, facilis unde voluptates dolor sed
+                  pariatur, suscipit dolore tempore, minus dolores recusandae
+                  voluptatem saepe?
+                </p>
+                <p className="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nesciunt quo velit, facilis unde voluptates dolor sed
+                  pariatur, suscipit dolore tempore, minus dolores recusandae
+                  voluptatem saepe?
+                </p>
               </div>
             </div>
 
-            <div 
-            onClick={() => setAccordion3(!accordion3)}
-            className="faq-item">
+            <div
+              onClick={() => setAccordion3(!accordion3)}
+              className="faq-item"
+            >
               <div className="faq-head">
                 <h3>¿Por qué es importante tener presencia en internet?</h3>
-                <span><i className={accordion3 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
+                <span>
+                  <i
+                    className={accordion3 ? "fa-solid fa-minus" : "fas fa-plus"}
+                  ></i>
+                </span>
               </div>
               <div className={accordion3 ? "show-faq-content" : "faq-content"}>
-                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
-                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+                <p className="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nesciunt quo velit, facilis unde voluptates dolor sed
+                  pariatur, suscipit dolore tempore, minus dolores recusandae
+                  voluptatem saepe?
+                </p>
+                <p className="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nesciunt quo velit, facilis unde voluptates dolor sed
+                  pariatur, suscipit dolore tempore, minus dolores recusandae
+                  voluptatem saepe?
+                </p>
               </div>
             </div>
 
-            <div 
-            onClick={() => setAccordion4(!accordion4)}
-            className="faq-item">
+            <div
+              onClick={() => setAccordion4(!accordion4)}
+              className="faq-item"
+            >
               <div className="faq-head">
                 <h3>¿Por qué es importante tener presencia en internet?</h3>
-                <span><i className={accordion4 ? "fa-solid fa-minus" : "fas fa-plus"}></i></span>
+                <span>
+                  <i
+                    className={accordion4 ? "fa-solid fa-minus" : "fas fa-plus"}
+                  ></i>
+                </span>
               </div>
               <div className={accordion4 ? "show-faq-content" : "faq-content"}>
-                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
-                <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo velit, facilis unde voluptates dolor sed pariatur, suscipit dolore tempore, minus dolores recusandae voluptatem saepe?</p>
+                <p className="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nesciunt quo velit, facilis unde voluptates dolor sed
+                  pariatur, suscipit dolore tempore, minus dolores recusandae
+                  voluptatem saepe?
+                </p>
+                <p className="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nesciunt quo velit, facilis unde voluptates dolor sed
+                  pariatur, suscipit dolore tempore, minus dolores recusandae
+                  voluptatem saepe?
+                </p>
               </div>
             </div>
           </div>
@@ -233,68 +357,115 @@ function App() {
       {/* termina la sección de testimoniales */}
 
       {/* sección de contacto */}
-      <section className='contact'>
+      <section className="contact">
         <div className="container">
           <div className="title">
-            <h2>
-              Contáctanos
-            </h2>
-            <p className='text'>Lorem ipsum dolor sit amet consectetur.</p>
+            <h2>Contáctanos</h2>
+            <p className="text">Lorem ipsum dolor sit amet consectetur.</p>
           </div>
-        <div className="row">
-          <div className="contact-left">
-            <h2>Envia tu mensaje aquí</h2>
-            <form>
-              <input type="text" className='form-control' placeholder='Nombre'/>
-              <input type="email" className='form-control' placeholder='Correo'/>
-              <textarea placeholder='Message' rows="6" />
-              <button type = "submit" className='submit-btn'> Enviar</button>
-            </form>
-          </div>
+          <div className="row">
+            <div className="contact-left">
+              <h2>Envia tu mensaje aquí</h2>
+              <form onSubmit={handleSubmit}>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  className="form-control"
+                  placeholder="Nombre"
+                />
+                <ValidationError
+                  prefix="Name"
+                  field="name"
+                  errors={state.errors}
+                />
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  className="form-control"
+                  placeholder="Correo"
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                  rows="6"
+                />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
+                <button
+                  type="submit"
+                  className="submit-btn"
+                  disabled={state.submitting}
+                >
+                  {" "}
+                  Enviar
+                </button>
+              </form>
+            </div>
 
             <div className="contact-right">
               <div>
-                <h2>Envianos un correo <i className='fa-solid fa-envelope'></i></h2>
-                <p className='text'> <a href='mailto:devix.tech.2023@gmail.com'> devix.tech.2023@gmail.com</a></p>
+                <h2>
+                  Envianos un correo <i className="fa-solid fa-envelope"></i>
+                </h2>
+                <p className="text">
+                  {" "}
+                  <a href="mailto:devix.tech.2023@gmail.com">
+                    {" "}
+                    devix.tech.2023@gmail.com
+                  </a>
+                </p>
               </div>
               <div>
-                <h2>Envianos un Whatsapp <i className="fa-brands fa-whatsapp"></i></h2>
-                <p className='text'>0412-xxxxxx</p>
+                <h2>
+                  Envianos un Whatsapp <i className="fa-brands fa-whatsapp"></i>
+                </h2>
+                <p className="text">0412-xxxxxx</p>
               </div>
             </div>
+          </div>
         </div>
-        </div>
-
       </section>
       {/* sección de contacto */}
 
       {/* footer */}
-      <footer className='footer center'>
+      <footer className="footer center">
         <div className="container">
-          <p className='text'>
-            Copyright <i className="fa-regular fa-copyright"></i> | Todos los derechos reservados 
+          <p className="text">
+            Copyright <i className="fa-regular fa-copyright"></i> | Todos los
+            derechos reservados
           </p>
           <div className="footer-links">
-          <a href="https://github.com/frako23" className='center'>
-            <i className="fa-brands fa-github"></i>
+            <a href="https://github.com/frako23" className="center">
+              <i className="fa-brands fa-github"></i>
             </a>
-            <a href="#" className='center'>
-            <i className="fa-brands fa-facebook"></i>
+            <a href="#" className="center">
+              <i className="fa-brands fa-facebook"></i>
             </a>
-            <a href="#" className='center'>
-            <i className="fa-brands fa-instagram"></i>
+            <a href="#" className="center">
+              <i className="fa-brands fa-instagram"></i>
             </a>
-            <a href="#" className='center'>
-            <i className="fa-brands fa-tiktok"></i>
+            <a href="#" className="center">
+              <i className="fa-brands fa-tiktok"></i>
             </a>
-            <a href="#" className='center'>
-            <i className="fa-brands fa-linkedin"></i>
+            <a href="#" className="center">
+              <i className="fa-brands fa-linkedin"></i>
             </a>
           </div>
         </div>
       </footer>
       {/* footer */}
-      </>
+    </>
   );
 }
 
