@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import "./styles/index.css";
 import { Testimonials } from "./components/testimonials";
+import { Projects } from "./components/projects";
 import imagen from "./assets/img/portatil-junto-tableta-telefono (1).jpg";
 
 function App() {
@@ -62,7 +63,7 @@ function App() {
         </nav>
 
         <div className="hero-div center container">
-          <h1>Haz que tu página web impresione</h1>
+          <h1 id='main-title'>Haz que tu página web impresione</h1>
           <p>La mejor manera de que personas conecten con tu marca.</p>
 
           <div className="hero-btns">
@@ -138,6 +139,12 @@ function App() {
         </div>
       </section>
       {/* termina sección de caracteristicas */}
+
+      {/* comienza la sección de proyectos */}
+
+      <Projects />
+
+      {/* termina la sección de proyectos */}
 
       {/* comienza la seccion de video */}
       <section className='video'>
