@@ -588,6 +588,10 @@ section{
 
   }
   
+  .navbar-nav{
+    display: contents;
+  }
+
   .contact .row div {
     margin: 0 4rem;
     padding: 1rem 0;
