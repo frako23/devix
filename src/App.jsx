@@ -3,7 +3,7 @@ import "./styles/index.css";
 import { Testimonials } from "./components/testimonials";
 import { Projects } from "./components/projects";
 import { useForm, ValidationError } from "@formspree/react";
-
+import Swal from 'sweetalert2'
 import imagen from "./assets/img/portatil-junto-tableta-telefono (1).jpg";
 
 function App() {
@@ -27,9 +27,24 @@ function App() {
   const handleToggler = () => setToggler(!toggler);
 
   const [state, handleSubmit] = useForm("xeqbqwwv");
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+  function limpiarFormulario() {
+    document.getElementById("formul").reset();
   }
+  
+  useEffect(() => {
+   
+    if (state.succeeded) {
+      Swal.fire({
+        icon: 'success',
+        title: '!Gracias por contactarnos!',
+        text: 'Te responderemos lo más pronto posible!',
+        confirmButtonColor: '#1bbc9c'
+        // footer: '<a href="">Why do I have this issue?</a>'
+      });
+      limpiarFormulario()
+    }
+
+  }, [state.succeeded])
 
   return (
     <>
@@ -366,7 +381,7 @@ function App() {
           <div className="row">
             <div className="contact-left">
               <h2>Envia tu mensaje aquí</h2>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} id="formul">
                 <input
                   id="name"
                   type="text"
