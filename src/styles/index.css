@@ -29,6 +29,12 @@ html{
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+  /*width: 8px;      Tamaño del scroll en vertical */
+  /*height: 8px;     Tamaño del scroll en horizontal */
+  display: none;  /* Ocultar scroll */
+}
+
 img{
   width: 100%;
 }
@@ -598,6 +604,7 @@ section{
     overflow: auto;
     height: 18rem;
   }
+  
   .navbar-collapse{
     transition: var(--transition);
     height: 0;
