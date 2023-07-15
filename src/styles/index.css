@@ -143,9 +143,9 @@ section{
   font-family: Orbitron;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 8ch;
+  width: 10ch;
   color: #1bbc9c;
-  animation: typing 3s steps(8), blink .5s infinite step-end alternate;
+  animation: typing 3s steps(10), blink .5s infinite step-end alternate;
   overflow: hidden;
 }
 #main-title{
