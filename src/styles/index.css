@@ -334,6 +334,78 @@ section{
   margin-right: 1.4rem;
 }
 
+/* Team */
+.team .row{
+  margin-top: 2rem;
+}
+
+.team-item{
+  margin: 2rem 0;
+}
+
+.team-img{
+  position: relative;
+}
+
+.team-icons{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background: var(--color3);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.team-icons a{
+  color: var(--color2);
+  width: 50px;
+  height: 50px;
+  transition: var(--transition);
+}
+
+.team-icons a:hover{
+  background: var(--color5);
+  color: #fff;
+}
+
+.team-img:hover .team-icons{
+  opacity: 1;
+}
+
+
+.team-info{
+  text-align: center;
+  padding: 2.5rem;
+  line-height: 1;
+}
+
+.team-info h3{
+  font-size: 1.4rem;
+  color: var(--color2);
+}
+
+.team-info span{
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.control-dots{
+  display: flex;
+  justify-content: center;
+}
+
+.carousel .control-dots .dot {
+  border: 0.5px solid;
+}
+
+.slider{
+  margin-inline: 24rem;
+}
+
 /* video */
 .video{
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url();
@@ -629,6 +701,10 @@ section{
     margin: 0 4rem;
     padding: 1rem 0;
 }
+
+.slider{
+  margin-inline: 12rem;
+}
 }
 
 @media screen and (min-width: 768px) {
@@ -642,6 +718,9 @@ section{
     margin: 0;
   }
 
+  .team-item{
+    margin: 0;
+  }
   
 }
 
@@ -654,6 +733,10 @@ section{
     display: block;
 
 }
+
+.slider{
+  margin-inline: 6rem;
+}
 }
 
 @media screen and (max-width: 450px) {
@@ -663,6 +746,9 @@ section{
   .contact .row div {
     margin: 0 1rem;
     padding: 1rem 0;
+}
+.slider{
+  margin-inline: 0;
 }
 }
 

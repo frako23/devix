@@ -12,7 +12,7 @@ export function Projects () {
     const [imgToShow4, setImgToShow4] = useState(imagen4);
 
     return(
-        <main>
+        <main style={{height:"60vh"}}>
             <div className="card">
             <h2>Nuestros Proyectos</h2>
 
