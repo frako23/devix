@@ -750,6 +750,9 @@ section{
 .slider{
   margin-inline: 0;
 }
+.typing {
+  display: flex;
+}
 }
 
 @media screen and (min-width: 1200px) {
