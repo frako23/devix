@@ -6,7 +6,8 @@ import { useForm, ValidationError } from "@formspree/react";
 import Swal from "sweetalert2";
 import imagen from "./assets/img/portatil-junto-tableta-telefono (1).jpg";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
+import { Typewriter } from "react-simple-typewriter";
 
 function App() {
   const [toggler, setToggler] = useState(false);
@@ -108,9 +109,22 @@ function App() {
         </nav>
 
         <div className="hero-div center container">
-          <h1 id="main-title">
-            Haz que tu página web{" "}
-            <span className={typing && "typing"}>impresione</span>{" "}
+          <h1 id="main-title">Haz que tu página web </h1>
+
+          <h1>
+            {" "}
+            <span className="typing">
+              <Typewriter
+                words={[" Impresione.", " Destaque.", " Sorprenda."]}
+                loop
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </span>
+            {/* <span className={typing && "typing"}>impresione</span>{" "} */}
           </h1>
           <p>La mejor manera de que personas conecten con tu marca.</p>
 
@@ -230,108 +244,130 @@ function App() {
             <p className="tex">Lorem ipsum dolor sit amet consectetur.</p>
           </div>
 
-          <div 
-            className="row slider">
-            
-
-          <Carousel
-          // width={"50%"}
-          // centerMode={true}
-          // centerSlidePercentage={50}
-          autoPlay={true}
-          emulateTouch={true}
-          infiniteLoop={true}
-          >
-
-          {/* Francisco */}
-            <div className="team-item">
-              <div className="team-img">
-                <img src="https://media.licdn.com/dms/image/D4E03AQGg4xkJ4_EM9g/profile-displayphoto-shrink_800_800/0/1671706099943?e=1697673600&v=beta&t=DvS9efNn80Lsobo8lSBXfj_tu_bN01DfU8PmS1EBY0k" alt="" />
-                <div className="team-icons">
-                  <a href="https://www.linkedin.com/in/franciscorozco/" className="center">
-                    <i className="fa-brands fa-linkedin"></i>
-                  </a>
-                  <a href="https://github.com/frako23" className="center">
-                    <i className="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://wa.me/584242526757" className="center">
-                    <i className="fa-brands fa-whatsapp"></i>
-                  </a>
+          <div className="row slider">
+            <Carousel
+              // width={"50%"}
+              // centerMode={true}
+              // centerSlidePercentage={50}
+              autoPlay={true}
+              emulateTouch={true}
+              infiniteLoop={true}
+            >
+              {/* Francisco */}
+              <div className="team-item">
+                <div className="team-img">
+                  <img
+                    src="https://media.licdn.com/dms/image/D4E03AQGg4xkJ4_EM9g/profile-displayphoto-shrink_800_800/0/1671706099943?e=1697673600&v=beta&t=DvS9efNn80Lsobo8lSBXfj_tu_bN01DfU8PmS1EBY0k"
+                    alt=""
+                  />
+                  <div className="team-icons">
+                    <a
+                      href="https://www.linkedin.com/in/franciscorozco/"
+                      className="center"
+                    >
+                      <i className="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/frako23" className="center">
+                      <i className="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/584242526757" className="center">
+                      <i className="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+                <div className="team-info">
+                  <h3>Francisco Orozco</h3>
+                  <span>Software Developer</span>
                 </div>
               </div>
-              <div className="team-info">
-                <h3>Francisco Orozco</h3>
-                <span>Software Developer</span>
-              </div>
-            </div>
 
-            {/* Daniel */}
-            <div className="team-item">
-              <div className="team-img">
-                <img src="https://media.licdn.com/dms/image/D4E35AQF8mipeWnssvA/profile-framedphoto-shrink_800_800/0/1671752081473?e=1692630000&v=beta&t=s7Gvasxxp83AFOqrGMw4BkKtpuOezFWeaMB70gCKY6M" alt="" />
-                <div className="team-icons">
-                  <a href="https://www.linkedin.com/in/daniel-moret/" className="center">
-                    <i className="fa-brands fa-linkedin"></i>
-                  </a>
-                  <a href="https://github.com/danielmoret" className="center">
-                    <i className="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://wa.me/584241751100" className="center">
-                    <i className="fa-brands fa-whatsapp"></i>
-                  </a>
+              {/* Daniel */}
+              <div className="team-item">
+                <div className="team-img">
+                  <img
+                    src="https://media.licdn.com/dms/image/D4E35AQF8mipeWnssvA/profile-framedphoto-shrink_800_800/0/1671752081473?e=1692630000&v=beta&t=s7Gvasxxp83AFOqrGMw4BkKtpuOezFWeaMB70gCKY6M"
+                    alt=""
+                  />
+                  <div className="team-icons">
+                    <a
+                      href="https://www.linkedin.com/in/daniel-moret/"
+                      className="center"
+                    >
+                      <i className="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/danielmoret" className="center">
+                      <i className="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/584241751100" className="center">
+                      <i className="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+                <div className="team-info">
+                  <h3>Daniel Moret</h3>
+                  <span>Software Developer</span>
                 </div>
               </div>
-              <div className="team-info">
-                <h3>Daniel Moret</h3>
-                <span>Software Developer</span>
-              </div>
-            </div>
 
-            {/* Abel */}
-            <div className="team-item">
-              <div className="team-img">
-                <img src="https://media.licdn.com/dms/image/C4E03AQGSdfNcTGJkiw/profile-displayphoto-shrink_800_800/0/1545141932886?e=1697673600&v=beta&t=-OzACtGnn6jL7jO3bXxQqZfyA6P61McIhgzIuDXgL5o" alt="" />
-                <div className="team-icons">
-                  <a href="https://www.linkedin.com/in/carlos-abel-colmenares-uray-6b7a57b7/" className="center">
-                    <i className="fa-brands fa-linkedin"></i>
-                  </a>
-                  <a href="#" className="center">
-                    <i className="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://wa.me/584127042420" className="center">
-                    <i className="fa-brands fa-whatsapp"></i>
-                  </a>
+              {/* Abel */}
+              <div className="team-item">
+                <div className="team-img">
+                  <img
+                    src="https://media.licdn.com/dms/image/C4E03AQGSdfNcTGJkiw/profile-displayphoto-shrink_800_800/0/1545141932886?e=1697673600&v=beta&t=-OzACtGnn6jL7jO3bXxQqZfyA6P61McIhgzIuDXgL5o"
+                    alt=""
+                  />
+                  <div className="team-icons">
+                    <a
+                      href="https://www.linkedin.com/in/carlos-abel-colmenares-uray-6b7a57b7/"
+                      className="center"
+                    >
+                      <i className="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" className="center">
+                      <i className="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/584127042420" className="center">
+                      <i className="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+                <div className="team-info">
+                  <h3>Abel Colmenarez</h3>
+                  <span>Senior Software Developer</span>
                 </div>
               </div>
-              <div className="team-info">
-                <h3>Abel Colmenarez</h3>
-                <span>Senior Software Developer</span>
-              </div>
-            </div>
 
               {/* Mariangel */}
-            <div className="team-item">
-              <div className="team-img">
-                <img src="https://media.licdn.com/dms/image/C4D03AQEKnm__Q6qV9w/profile-displayphoto-shrink_800_800/0/1645018791809?e=1697673600&v=beta&t=SaLHA6Fl8qvEx8LPNNh_6JX6YhZ2iI25jh3UC1sKoWU" alt="" />
-                <div className="team-icons">
-                  <a href="https://www.linkedin.com/in/mariangel-rodriguez-perozo-/" className="center">
-                    <i className="fa-brands fa-linkedin"></i>
-                  </a>
-                  <a href="https://www.instagram.com/mariangellifestyle/" className="center">
-                    <i className="fa-brands fa-instagram"></i>
-                  </a>
-                  <a href="https://wa.me/584241560579" className="center">
-                    <i className="fa-brands fa-whatsapp"></i>
-                  </a>
+              <div className="team-item">
+                <div className="team-img">
+                  <img
+                    src="https://media.licdn.com/dms/image/C4D03AQEKnm__Q6qV9w/profile-displayphoto-shrink_800_800/0/1645018791809?e=1697673600&v=beta&t=SaLHA6Fl8qvEx8LPNNh_6JX6YhZ2iI25jh3UC1sKoWU"
+                    alt=""
+                  />
+                  <div className="team-icons">
+                    <a
+                      href="https://www.linkedin.com/in/mariangel-rodriguez-perozo-/"
+                      className="center"
+                    >
+                      <i className="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/mariangellifestyle/"
+                      className="center"
+                    >
+                      <i className="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/584241560579" className="center">
+                      <i className="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+                <div className="team-info">
+                  <h3>Mariangel Rodríguez</h3>
+                  <span>Community Manager</span>
                 </div>
               </div>
-              <div className="team-info">
-                <h3>Mariangel Rodríguez</h3>
-                <span>Community Manager</span>
-              </div>
-            </div>
-            </ Carousel>
-
+            </Carousel>
           </div>
         </div>
       </section>
