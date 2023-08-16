@@ -139,7 +139,7 @@ section{
 }
 
 .typing span{
-  display: block;
+  /* display: block; */
   font-family: Orbitron;
   white-space: nowrap;
   /* border-right: 4px solid; */
@@ -147,6 +147,10 @@ section{
   color: #1bbc9c;
   /* animation: typing 2s steps(10), blink .5s infinite step-end alternate;
   overflow: hidden; */
+}
+
+.cursor{
+  display: block;
 }
 #main-title{
   /* display: block; */
@@ -750,7 +754,7 @@ section{
 .slider{
   margin-inline: 0;
 }
-.typing {
+.cursor {
   display: flex;
 }
 }

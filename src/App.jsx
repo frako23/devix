@@ -113,7 +113,7 @@ function App() {
 
           <h1>
             {" "}
-            <span className="typing" style={{display: "flex"}}>
+            <span className="typing crusor">
               <Typewriter
                 words={[" Impresione.", " Destaque.", " Sorprenda."]}
                 loop
