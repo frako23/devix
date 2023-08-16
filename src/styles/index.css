@@ -139,7 +139,6 @@ section{
 }
 
 .typing span{
-  /* display: block; */
   font-family: Orbitron;
   white-space: nowrap;
   /* border-right: 4px solid; */
